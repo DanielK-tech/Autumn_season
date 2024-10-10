@@ -16,7 +16,29 @@
             font-size: 1.7em;
             padding-top: 10px;
             padding-right: 20px;
-            transition: $transitionTime;
+            transition: $transitionTime; 
+
+            &:hover { 
+                transform: scale(1.3) rotate(15deg);
+            }
+        } 
+        a { 
+            position: relative;  
+            text-decoration: none;
+            color: $colorWhite;
+            z-index: 0; 
+            
+            &::before { 
+                content: "";
+                width: 100%;
+                height: 100%;
+                background-image: $backLight;
+                filter: blur(10px);
+                position: absolute;
+                left: 0;
+                top: 0;
+                z-index: -1;
+            }
         }
     }
 }

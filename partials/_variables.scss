@@ -1,8 +1,9 @@
 /** barvičky ***/
-$NavigationBackgroud: radial-gradient(circle farthest-corner at 10% 20%,
-        #941e09 20%,
-        #158512 110%); 
-$colorWhite: #fff;
+$NavigationBackgroud: radial-gradient(circle farthest-corner at 10% 20%, rgba(148, 30, 9, 0.5) 20%, 
+rgba(21, 133, 18, 0.5) 110%);
+         
+$colorWhite: #fff; 
+$backLight: radial-gradient(circle farthest-corner at 10% 20%, #cccc17 25%, #792c2c 100%);
 /*** Velikosti ***/
 $oneHundred: 100%; 
 $gapSize: 20px;  

@@ -12,11 +12,14 @@ body {
     flex-direction: column;
     min-height: 100vh;
     font-family: Raleway, sans-serif;
-} 
+}
 
-header { 
-    background-image: url(./img/Pozim.jpg); 
-    background-size: cover;  
+header {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-image: url(./img/Pozim.jpg);
+    background-size: cover;
     background-position: $backgroundPozition;
     min-height: 100vh;
 }
@@ -25,11 +28,28 @@ header {
 .main-navigation {
     display: flex;
     justify-content: center;
+    position: fixed;
     width: $oneHundred;
     height: $remSize;
-    background: $NavigationBackgroud; 
-    color: $colorWhite; 
-    font-weight: bold; 
+    background: $NavigationBackgroud;
+    color: $colorWhite;
+    font-weight: bold;
     font-size: 1.5rem;
     @include mainUl;
+}
+
+.welcoming-h1 {
+    display: flex;
+    align-items: flex-end;
+    flex-direction: column;
+    position: absolute;
+    font-size: $remSize;
+    right: 35px;
+    bottom: 10px;
+    color: $colorWhite;
+    z-index: 15161;
+
+    span {
+        background: $NavigationBackgroud;
+    }
 }

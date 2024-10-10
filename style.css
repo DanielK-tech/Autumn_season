@@ -20,6 +20,9 @@ body {
 }
 
 header {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   background-image: url(./img/Pozim.jpg);
   background-size: cover;
   background-position: 50% 25%;
@@ -30,9 +33,10 @@ header {
 .main-navigation {
   display: flex;
   justify-content: center;
+  position: fixed;
   width: 100%;
   height: 4.5rem;
-  background: radial-gradient(circle farthest-corner at 10% 20%, #941e09 20%, #158512 110%);
+  background: radial-gradient(circle farthest-corner at 10% 20%, rgba(148, 30, 9, 0.5) 20%, rgba(21, 133, 18, 0.5) 110%);
   color: #fff;
   font-weight: bold;
   font-size: 1.5rem;
@@ -53,4 +57,39 @@ header {
   padding-top: 10px;
   padding-right: 20px;
   transition: 0.5s;
+}
+.main-navigation ul li:hover {
+  transform: scale(1.3) rotate(15deg);
+}
+.main-navigation ul a {
+  position: relative;
+  text-decoration: none;
+  color: #fff;
+  z-index: 0;
+}
+.main-navigation ul a::before {
+  content: "";
+  width: 100%;
+  height: 100%;
+  background-image: radial-gradient(circle farthest-corner at 10% 20%, #cccc17 25%, #792c2c 100%);
+  filter: blur(10px);
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: -1;
+}
+
+.welcoming-h1 {
+  display: flex;
+  align-items: flex-end;
+  flex-direction: column;
+  position: absolute;
+  font-size: 4.5rem;
+  right: 35px;
+  bottom: 10px;
+  color: #fff;
+  z-index: 15161;
+}
+.welcoming-h1 span {
+  background: radial-gradient(circle farthest-corner at 10% 20%, rgba(148, 30, 9, 0.5) 20%, rgba(21, 133, 18, 0.5) 110%);
 }/*# sourceMappingURL=style.css.map */
