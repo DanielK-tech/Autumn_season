@@ -42,7 +42,8 @@ h2 {
     background: $NavigationBackgroud;
     color: $colorWhite;
     font-weight: bold;
-    font-size: 1.5rem;
+    font-size: 1.5rem; 
+    z-index: 154551;
     @include mainUl;
 }
 /** h1 */
@@ -55,7 +56,7 @@ h2 {
     right: 35px;
     bottom: 10px;
     color: $colorWhite;
-    z-index: 15161;
+    // z-index: 15161;
 
     span {
         background: $NavigationBackgroud;
@@ -68,7 +69,17 @@ h2 {
     padding-top: 15px; 
     background-image: $NavigationBackgroud;    
     @include firstSection;
-} 
+}  
+
+/** Druhá sekce **/ 
+.second-trips { 
+    display: flex ;
+    justify-content: center; 
+    align-items: center; 
+    flex-direction: column; 
+    padding-top: 10px;
+    background-image: $BackgroudReverse; 
+}
 
 @include mobileResponzivity; 
 @include tabletResponzivity;

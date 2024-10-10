@@ -7,6 +7,7 @@
 /** transition časy **/
 /** Ul v hlavní Navigaci **/
 /****** První sekce ******/
+/** Druhá sekce **/
 /********** Responzivity *********/
 * {
   padding: 0;
@@ -50,6 +51,7 @@ h3 {
   color: #fff;
   font-weight: bold;
   font-size: 1.5rem;
+  z-index: 154551;
 }
 .main-navigation ul {
   display: flex;
@@ -57,7 +59,7 @@ h3 {
   gap: 20px;
   width: 100%;
   justify-content: center;
-  z-index: 100;
+  z-index: 10041121;
 }
 .main-navigation ul li {
   list-style: none;
@@ -75,7 +77,7 @@ h3 {
   position: relative;
   text-decoration: none;
   color: #fff;
-  z-index: 0;
+  z-index: 9999;
 }
 .main-navigation ul a::before {
   content: "";
@@ -99,7 +101,6 @@ h3 {
   right: 35px;
   bottom: 10px;
   color: #fff;
-  z-index: 15161;
 }
 .welcoming-h1 span {
   background: radial-gradient(circle farthest-corner at 10% 20%, rgba(148, 30, 9, 0.5) 20%, rgba(21, 133, 18, 0.5) 110%);
@@ -137,7 +138,7 @@ h3 {
 .first-about .first-photo {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  grid-template-rows: repeat(2, 1fr);
+  grid-template-rows: repeat(3, 1fr);
   grid-gap: 10px 10px;
   width: 98%;
   margin-bottom: 20px;
@@ -154,6 +155,16 @@ h3 {
 }
 .first-about .first-photo .first-photos .first-imgs:hover {
   transform: scale(1.1);
+}
+
+/** Druhá sekce **/
+.second-trips {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding-top: 10px;
+  background-image: radial-gradient(circle farthest-corner at 10% 20%, rgba(21, 133, 18, 0.5) 110%, rgba(148, 30, 9, 0.5) 20%);
 }
 
 @media (max-width: 600px) {
