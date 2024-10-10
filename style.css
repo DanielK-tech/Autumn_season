@@ -6,6 +6,8 @@
 /*** Velikosti ***/
 /** transition časy **/
 /** Ul v hlavní Navigaci **/
+/****** První sekce ******/
+/********** Responzivity *********/
 * {
   padding: 0;
   margin: 0;
@@ -27,6 +29,14 @@ header {
   background-size: cover;
   background-position: 50% 25%;
   min-height: 100vh;
+}
+
+h2 {
+  font-size: 2rem;
+}
+
+h3 {
+  font-size: 1.5rem;
 }
 
 /*******************************************/
@@ -79,6 +89,7 @@ header {
   z-index: -1;
 }
 
+/** h1 */
 .welcoming-h1 {
   display: flex;
   align-items: flex-end;
@@ -92,4 +103,59 @@ header {
 }
 .welcoming-h1 span {
   background: radial-gradient(circle farthest-corner at 10% 20%, rgba(148, 30, 9, 0.5) 20%, rgba(21, 133, 18, 0.5) 110%);
+}
+
+/**** První sekce **/
+.first-about {
+  display: flex;
+  padding-top: 15px;
+  background-image: radial-gradient(circle farthest-corner at 10% 20%, rgba(148, 30, 9, 0.5) 20%, rgba(21, 133, 18, 0.5) 110%);
+}
+.first-about .first-container {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+.first-about .first-text {
+  gap: 20px;
+  align-items: center;
+}
+.first-about .first-text .first-p {
+  text-align: block;
+  letter-spacing: 1px;
+  line-height: 1.5;
+  font-weight: 400;
+  font-size: 1.5rem;
+  width: 50%;
+  padding-bottom: 10px;
+}
+
+@media (max-width: 600px) {
+  .main-navigation ul {
+    display: none;
+  }
+  .welcoming-h1 {
+    position: absolute;
+    right: 10px;
+    font-size: 3rem;
+  }
+  /***************************/
+}
+@media (max-width: 853px) {
+  .welcoming-h1 {
+    right: 25px;
+  }
+  /**první sekce (dělat v nestingu vše) **/
+  .first-about {
+    flex-direction: column;
+    align-items: center;
+    padding-top: 10px;
+  }
+  .first-about .first-text {
+    flex: 0 1 0;
+  }
+  .first-about .first-text .first-p {
+    width: 90%;
+  }
+  /***************************/
 }/*# sourceMappingURL=style.css.map */

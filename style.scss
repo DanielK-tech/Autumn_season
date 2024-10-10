@@ -1,5 +1,7 @@
 @import './partials/variables';
-@import './partials/mixins';
+@import './partials/mixins'; 
+
+
 
 * {
     padding: 0;
@@ -22,6 +24,12 @@ header {
     background-size: cover;
     background-position: $backgroundPozition;
     min-height: 100vh;
+} 
+h2 { 
+    font-size: $fontH2Size;
+}
+ h3 { 
+    font-size: $fontSize;
 }
 
 /*******************************************/
@@ -37,7 +45,7 @@ header {
     font-size: 1.5rem;
     @include mainUl;
 }
-
+/** h1 */
 .welcoming-h1 {
     display: flex;
     align-items: flex-end;
@@ -52,4 +60,15 @@ header {
     span {
         background: $NavigationBackgroud;
     }
-}
+} 
+
+/**** První sekce **/ 
+.first-about { 
+    display: flex;  
+    padding-top: 15px; 
+    background-image: $NavigationBackgroud;    
+    @include firstSection;
+} 
+
+@include mobileResponzivity; 
+@include tabletResponzivity;
