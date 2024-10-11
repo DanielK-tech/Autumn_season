@@ -1,4 +1,15 @@
-@import './variables';
+@import './variables'; 
+@import './functions';
+
+/*** Multifinkční mixiny *****/
+@mixin BorderRadius ($radius: 5px) { //<= default, lze předělat v ()
+    border-radius: $radius;
+}
+
+@mixin WidthHeight ($width: 100%, $height: 100%) {
+    width: $width;
+    height: $height;
+}
 
 /** Ul v hlavní Navigaci **/
 @mixin mainUl {
@@ -31,8 +42,7 @@
 
             &::before {
                 content: "";
-                width: 100%;
-                height: 100%;
+                @include WidthHeight();
                 background-image: $backLight;
                 filter: blur(10px);
                 position: absolute;
@@ -86,7 +96,7 @@
             .first-imgs {
                 width: 100%;
                 height: 100%;
-                border-radius: 5px;
+                @include BorderRadius();
                 transition: $transitionTime;
 
                 &:hover {
@@ -114,20 +124,21 @@
             justify-content: center;
             flex: 1 0 0;
             margin-left: $tenPXSpace;
-            // width: 50%;
 
             .second-article {
                 text-align: justify;
-                font-size: $fontSize; 
+                font-size: $fontSize;
                 padding: $tenPXSpace;
             }
 
             h3 {
+                display: flex;
+                justify-content: center;
                 line-height: 2.75;
-                letter-spacing: 1px;
+                letter-spacing: 1px;                                 
             }
 
-            p {
+            p {                 
                 line-height: 1.5;
                 letter-spacing: 1px;
             }
@@ -150,6 +161,7 @@
                     width: 95%;
                     height: 100%;
                     margin: $tenPXSpace;
+                    @include BorderRadius();
                 }
             }
         }
@@ -185,13 +197,13 @@
             }
         }
 
-        /***************************/ 
-        /*** druhá sekce **/ 
-        .second-container { 
-            flex-direction: column;             
-            
-            .second-photo{ 
-                .second-photo-container { 
+        /***************************/
+        /*** druhá sekce **/
+        .second-container {
+            flex-direction: column;
+
+            .second-photo {
+                .second-photo-container {
                     align-items: center;
                 }
             }
@@ -213,9 +225,20 @@
         }
 
         /***************************/
-        /** druhá sekce **/ 
-        .second-article { 
-            text-align: center;
+        /** druhá sekce **/
+
+        .second-article {
+            margin: 0 auto;
+
+            h3 {
+                font-size: 1.25rem; 
+                text-align: center;
+            }
+
+            p {
+                font-size: $fontMobileSize;
+                text-align: center;
+            }
         }
 
     }

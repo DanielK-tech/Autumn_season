@@ -1,0 +1,21 @@
+/**** barvičkové fce ***/ 
+
+@function colorMix($color1, $color2, $weight: 50%){ //<= weight je poměr, která bude převládat nad kterou
+    @return mix($color1, $color2, $weight);
+}  
+
+/** Příklad **/ 
+// $primary-color: #ff0000; // červená
+// $secondary-color: #0000ff; // modrá
+
+// $combined-color: colorMix($primary-color, $secondary-color, 70%);
+
+
+/**** počítání calc() ****/  
+@function sumPlus($number, $number2){ 
+    @return $number + $number2;
+}
+
+@function sumMinus($number, $number2){ 
+    @return $number - $number2;
+}
