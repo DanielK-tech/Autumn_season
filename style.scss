@@ -88,6 +88,32 @@ h3 {
     }
 
     @include SecondSection;
+} 
+/***************************************************************/
+/***************************************************************/ 
+
+footer { 
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+     
+    background: $NavigationBackgroud; 
+    padding: $tenPXSpace; 
+    font-size: $fontSize; 
+    p { 
+        position: relative;
+        color: $colorWhite;
+        &::before { 
+            content: "";
+                    @include WidthHeight();
+                    background-image: $footerBackground;
+                    filter: blur(10px);
+                    position: absolute;
+                    left: 0;
+                    top: 0;
+                    z-index: -1;
+        }
+    }
 }
 
 @include mobileResponzivity;

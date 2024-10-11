@@ -244,6 +244,32 @@ h3 {
   margin-bottom: 20px;
 }
 
+/***************************************************************/
+/***************************************************************/
+footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: radial-gradient(circle farthest-corner at 10% 20%, rgba(148, 30, 9, 0.5) 20%, rgba(21, 133, 18, 0.5) 110%);
+  padding: 10px;
+  font-size: 1.5rem;
+}
+footer p {
+  position: relative;
+  color: #fff;
+}
+footer p::before {
+  content: "";
+  width: 100%;
+  height: 100%;
+  background-image: radial-gradient(circle farthest-corner at 10% 20%, #cccc17 150%, #792c2c 50%);
+  filter: blur(10px);
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: -1;
+}
+
 @media (max-width: 600px) {
   .main-navigation ul {
     display: none;
