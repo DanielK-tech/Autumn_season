@@ -9,7 +9,14 @@
 @mixin WidthHeight ($width: 100%, $height: 100%) {
     width: $width;
     height: $height;
+} 
+
+@mixin hr ($width: 80%, $border: 2px solid black) { 
+    width: $width; 
+    border: $border;
 }
+/********************************************************************/ 
+/********************************************************************/ 
 
 /** Ul v hlavní Navigaci **/
 @mixin mainUl {
@@ -53,6 +60,8 @@
         }
     }
 }
+/******************************************************************/ 
+/******************************************************************/ 
 
 /****** První sekce ******/
 @mixin firstSection {
@@ -65,10 +74,16 @@
     .first-text {
         align-items: center;
         justify-content: space-around;
-        gap: $gapSize;
-
+        
+         
+        .first-text-container{ 
+            display: flex; 
+            flex-direction: column; 
+            align-items: center; 
+            gap: sumMinus($gapSize, 1px);
+        }
         .first-p {
-            text-align: block;
+            text-align: justify;
             letter-spacing: 1px;
             line-height: 1.5;
             font-weight: 400;
@@ -106,6 +121,8 @@
         }
     }
 }
+/*************************************************************/
+/*************************************************************/ 
 
 /** Druhá sekce **/
 @mixin SecondSection {
@@ -165,9 +182,16 @@
                 }
             }
         }
+    } 
+    .second-hr { 
+        @include hr(95%); 
+        margin-bottom: $gapSize;
     }
 
-}
+} 
+/******************************************************/ 
+
+
 
 
 /********** Responzivity *********/
@@ -198,6 +222,7 @@
         }
 
         /***************************/
+
         /*** druhá sekce **/
         .second-container {
             flex-direction: column;
@@ -210,6 +235,8 @@
         }
     }
 }
+/******************************************************/ 
+/******************************************************/ 
 
 @mixin mobileResponzivity {
     @media (max-width: 600px) {

@@ -1,5 +1,5 @@
 @import './partials/variables';
-@import './partials/mixins';  
+@import './partials/mixins';
 @import './partials/functions';
 
 
@@ -13,7 +13,7 @@
 body {
     display: flex;
     flex-direction: column;
-    min-height: 100vh;     
+    min-height: 100vh;
     font-family: Raleway, sans-serif;
 }
 
@@ -25,11 +25,13 @@ header {
     background-size: cover;
     background-position: $backgroundPozition;
     min-height: 100vh;
-} 
-h2 { 
+}
+
+h2 {
     font-size: $fontH2Size;
 }
- h3 { 
+
+h3 {
     font-size: $fontSize;
 }
 
@@ -43,10 +45,11 @@ h2 {
     background: $NavigationBackgroud;
     color: $colorWhite;
     font-weight: bold;
-    font-size: 1.5rem; 
+    font-size: 1.5rem;
     z-index: 154551;
     @include mainUl;
 }
+
 /** h1 */
 .welcoming-h1 {
     display: flex;
@@ -56,32 +59,36 @@ h2 {
     font-size: $remSize;
     right: 35px;
     bottom: $tenPXSpace;
-    color: $colorWhite;
-    // z-index: 15161;
+    color: $colorWhite;    
 
     span {
         background: $NavigationBackgroud;
     }
-} 
+}
 
-/**** První sekce **/ 
-.first-about { 
-    display: flex;  
-    padding-top: 15px; 
-    background-image: $NavigationBackgroud;    
+/**** První sekce **/
+.first-about {
+    display: flex;
+    padding-top: 15px;
+    background-image: $NavigationBackgroud;
     @include firstSection;
-}  
+}
 
-/** Druhá sekce **/ 
-.second-trips { 
-    display: flex ;
-    justify-content: center; 
-    align-items: center; 
-    flex-direction: column; 
+/** Druhá sekce **/
+.second-trips {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
     padding-top: $tenPXSpace;
-    background-image: $BackgroudReverse;  
+    background-image: $BackgroudReverse;
+
+    .second-h2 {
+        font-size: 3rem;
+    }
+
     @include SecondSection;
 }
 
-@include mobileResponzivity; 
+@include mobileResponzivity;
 @include tabletResponzivity;

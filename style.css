@@ -9,10 +9,19 @@
 /** Příklad **/
 /**** počítání calc() ****/
 /*** Multifinkční mixiny *****/
+/********************************************************************/
+/********************************************************************/
 /** Ul v hlavní Navigaci **/
+/******************************************************************/
+/******************************************************************/
 /****** První sekce ******/
+/*************************************************************/
+/*************************************************************/
 /** Druhá sekce **/
+/******************************************************/
 /********** Responzivity *********/
+/******************************************************/
+/******************************************************/
 /**** barvičkové fce ***/
 /** Příklad **/
 /**** počítání calc() ****/
@@ -128,10 +137,15 @@ h3 {
 .first-about .first-text {
   align-items: center;
   justify-content: space-around;
-  gap: 20px;
+}
+.first-about .first-text .first-text-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 19px;
 }
 .first-about .first-text .first-p {
-  text-align: block;
+  text-align: justify;
   letter-spacing: 1px;
   line-height: 1.5;
   font-weight: 400;
@@ -170,6 +184,9 @@ h3 {
   flex-direction: column;
   padding-top: 10px;
   background-image: radial-gradient(circle farthest-corner at 10% 20%, rgba(21, 133, 18, 0.5) 20%, rgba(148, 30, 9, 0.5) 110%);
+}
+.second-trips .second-h2 {
+  font-size: 3rem;
 }
 .second-trips .second-container {
   display: flex;
@@ -220,6 +237,11 @@ h3 {
   height: 100%;
   margin: 10px;
   border-radius: 5px;
+}
+.second-trips .second-hr {
+  width: 95%;
+  border: 2px solid black;
+  margin-bottom: 20px;
 }
 
 @media (max-width: 600px) {
