@@ -121,6 +121,7 @@ h3 {
 .first-about .first-text {
   align-items: center;
   justify-content: space-around;
+  gap: 20px;
 }
 .first-about .first-text .first-p {
   text-align: block;
@@ -131,16 +132,13 @@ h3 {
   width: 50%;
   padding-bottom: 10px;
 }
-.first-about .first-text .first-line {
-  width: 60%;
-  border: 2px solid black;
-}
 .first-about .first-photo {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   grid-template-rows: repeat(3, 1fr);
   grid-gap: 10px 10px;
   width: 98%;
+  height: 100%;
   margin-bottom: 20px;
 }
 .first-about .first-photo .first-photos {
@@ -164,7 +162,54 @@ h3 {
   align-items: center;
   flex-direction: column;
   padding-top: 10px;
-  background-image: radial-gradient(circle farthest-corner at 10% 20%, rgba(21, 133, 18, 0.5) 110%, rgba(148, 30, 9, 0.5) 20%);
+  background-image: radial-gradient(circle farthest-corner at 10% 20%, rgba(21, 133, 18, 0.5) 20%, rgba(148, 30, 9, 0.5) 110%);
+}
+.second-trips .second-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+  width: 100%;
+  padding-top: 10px;
+  /**fotky **/
+}
+.second-trips .second-container .second-text {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  flex: 1 0 0;
+  margin-left: 10px;
+}
+.second-trips .second-container .second-text .second-article {
+  text-align: justify;
+  font-size: 1.5rem;
+  padding: 10px;
+}
+.second-trips .second-container .second-text h3 {
+  line-height: 2.75;
+  letter-spacing: 1px;
+}
+.second-trips .second-container .second-text p {
+  line-height: 1.5;
+  letter-spacing: 1px;
+}
+.second-trips .second-container .second-photo {
+  display: flex;
+  flex-wrap: wrap;
+  flex: 1;
+}
+.second-trips .second-container .second-photo .second-photo-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  flex: 1;
+  width: 100%;
+}
+.second-trips .second-container .second-photo .second-photo-container .second-photos {
+  width: 95%;
+  height: 100%;
+  margin: 10px;
 }
 
 @media (max-width: 600px) {
@@ -177,6 +222,10 @@ h3 {
     font-size: 3rem;
   }
   /***************************/
+  /** druhá sekce **/
+  .second-article {
+    text-align: center;
+  }
 }
 @media (max-width: 853px) {
   .welcoming-h1 {
@@ -199,4 +248,11 @@ h3 {
     display: none;
   }
   /***************************/
+  /*** druhá sekce **/
+  .second-container {
+    flex-direction: column;
+  }
+  .second-container .second-photo .second-photo-container {
+    align-items: center;
+  }
 }/*# sourceMappingURL=style.css.map */

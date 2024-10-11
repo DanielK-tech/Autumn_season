@@ -16,7 +16,7 @@
             font-size: 1.7em;
             padding-top: 10px;
             padding-right: 20px;
-            transition: $transitionTime; 
+            transition: $transitionTime;
 
             &:hover {
                 transform: scale(1.3) rotate(15deg);
@@ -48,54 +48,114 @@
 @mixin firstSection {
     .first-container {
         display: flex;
-        flex-direction: column;         
+        flex-direction: column;
         flex: 1;
     }
 
-    .first-text {        
-        align-items: center; 
+    .first-text {
+        align-items: center;
         justify-content: space-around;
+        gap: $gapSize;
 
         .first-p {
             text-align: block;
             letter-spacing: 1px;
-            line-height: 1.5; 
-            font-weight: 400; 
+            line-height: 1.5;
+            font-weight: 400;
             font-size: $fontSize;
-            width: 50%; 
+            width: 50%;
             padding-bottom: 10px;
-        } 
-        .first-line { 
-            width: 60%;
-            border: 2px solid black;
         }
-    } 
+
+    }
+
     /** fotky **/
-    .first-photo {  
-        display: grid; 
-        grid-template-columns: repeat(2, 1fr); 
-        grid-template-rows: repeat(3, 1fr); 
-        grid-gap: 10px 10px;        
-        width: 98%; 
-        margin-bottom: 20px;         
-        .first-photos { 
-            width: 100%; 
-            height: 100%; 
-            .first-imgs { 
-                width: 100%; 
-                height: 100%; 
-                border-radius: 5px;  
+    .first-photo {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(3, 1fr);
+        grid-gap: 10px 10px;
+        width: 98%;
+        height: 100%;
+        margin-bottom: 20px;
+
+        .first-photos {
+            width: 100%;
+            height: 100%;
+
+            .first-imgs {
+                width: 100%;
+                height: 100%;
+                border-radius: 5px;
                 transition: $transitionTime;
-                &:hover { 
-                    transform: scale(1.1) ;
+
+                &:hover {
+                    transform: scale(1.1);
                 }
             }
         }
     }
-} 
+}
 
-/** Druhá sekce **/ 
+/** Druhá sekce **/
+@mixin SecondSection {
+    .second-container {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: $gapSize;
+        width: 100%;
+        padding-top: $tenPXSpace;
 
+        .second-text {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            flex: 1 0 0;
+            margin-left: $tenPXSpace;
+            // width: 50%;
+
+            .second-article {
+                text-align: justify;
+                font-size: $fontSize; 
+                padding: $tenPXSpace;
+            }
+
+            h3 {
+                line-height: 2.75;
+                letter-spacing: 1px;
+            }
+
+            p {
+                line-height: 1.5;
+                letter-spacing: 1px;
+            }
+        }
+
+        /**fotky **/
+        .second-photo {
+            display: flex;
+            flex-wrap: wrap;
+            flex: 1;
+
+            .second-photo-container {
+                display: flex;
+                flex-direction: column;
+                justify-content: space-around;
+                flex: 1;
+                width: 100%;
+
+                .second-photos {
+                    width: 95%;
+                    height: 100%;
+                    margin: $tenPXSpace;
+                }
+            }
+        }
+    }
+
+}
 
 
 /********** Responzivity *********/
@@ -103,26 +163,39 @@
     @media (max-width: 853px) {
         .welcoming-h1 {
             right: 25px;
-        } 
+        }
+
         /**první sekce (dělat v nestingu vše) **/
         .first-about {
             flex-direction: column;
             align-items: center;
-            padding-top: 10px;
+            padding-top: $tenPXSpace;
 
-            .first-text { 
+            .first-text {
                 gap: $gapSize;
                 flex: 0 1 0;
 
                 .first-p {
                     width: 90%;
                 }
-            } 
-            .first-photo { 
+            }
+
+            .first-photo {
                 display: none;
             }
         }
-        /***************************/
+
+        /***************************/ 
+        /*** druhá sekce **/ 
+        .second-container { 
+            flex-direction: column;             
+            
+            .second-photo{ 
+                .second-photo-container { 
+                    align-items: center;
+                }
+            }
+        }
     }
 }
 
@@ -137,9 +210,13 @@
             position: absolute;
             right: 10px;
             font-size: 3rem;
-        }     
-        /***************************/
+        }
 
+        /***************************/
+        /** druhá sekce **/ 
+        .second-article { 
+            text-align: center;
+        }
 
     }
 }
