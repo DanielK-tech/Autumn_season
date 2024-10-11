@@ -1,7 +1,15 @@
 @charset "UTF-8";
+/** velikosti **/
+/** fce pro paragrafy **/
+/*** fce na přepočet velikosti od body **/
+/** velikosti **/
+/** fce pro paragrafy **/
+/*** fce na přepočet velikosti od body **/
+/** velikosti **/
 /*** Multifunkční mixiny ***/
 /********************************************************/
 /********************************************************/
+/** velikosti **/
 * {
   padding: 0;
   margin: 0;
@@ -12,4 +20,17 @@ body {
   display: flex;
   flex-direction: column;
   font-family: Raleway, sans-serif;
+  font-size: 20px;
+}
+
+p {
+  font-size: 18px;
+}
+
+footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 10px;
 }/*# sourceMappingURL=style.css.map */

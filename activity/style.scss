@@ -11,5 +11,15 @@
 body { 
     display: flex; 
     flex-direction: column; 
-    font-family: Raleway, sans-serif;
+    font-family: Raleway, sans-serif; 
+    font-size: $basicBodyFont;
+}  
+
+p{ 
+    font-size: $basicValueP;
+}
+
+footer { 
+    @include flexStandart; 
+    @include paddingSize();
 }

@@ -1,1 +1,11 @@
-@import './variables';
+@import './variables'; 
+
+/** fce pro paragrafy **/
+@function em($pixels, $basicValueP){ 
+    @return ($pixels / $basicValueP) * 1em;
+} 
+
+/*** fce na přepočet velikosti od body **/ 
+@function emBody($pixels, $basicBodyFont){ 
+    @return ($pixels / $basicBodyFont) * 1em;
+}
