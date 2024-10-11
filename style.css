@@ -321,4 +321,7 @@ footer p::before {
   .second-container .second-photo .second-photo-container {
     align-items: center;
   }
+}
+footer p {
+  font-size: 1.14rem;
 }/*# sourceMappingURL=style.css.map */
