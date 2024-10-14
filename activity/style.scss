@@ -22,4 +22,12 @@ p{
 footer { 
     @include flexStandart; 
     @include paddingSize();
+} 
+/********************************************************/ 
+/********************************************************/ 
+
+//navigace 
+.activity-nav { 
+    @include navFlex(); 
+    @include navRest;
 }
