@@ -52,6 +52,10 @@ h1 {
   color: #fff;
 }
 
+h2 {
+  font-size: 2rem;
+}
+
 p {
   font-size: 18px;
 }
@@ -114,4 +118,34 @@ footer {
   left: 0;
   top: 0;
   z-index: -1;
+}
+
+/****** první sekce ****/
+.drakiada h2 {
+  text-align: center;
+}
+
+/** wrapper **/
+.drakiada-wrapper {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+}
+.drakiada-wrapper .drakiada-text {
+  flex: 1;
+  padding: 10px;
+  text-align: center;
+}
+.drakiada-wrapper .drakiada-photo {
+  display: grid;
+  flex: 1;
+  grid-template: repeat(2, 1fr)/repeat(2, 1fr);
+  grid-template-areas: "one two" "footer footer";
+}
+.drakiada-wrapper .drakiada-photo .drakiada-img {
+  width: 100%;
+  height: 100%;
+}
+.drakiada-wrapper .drakiada-photo .img3 {
+  grid-area: footer;
 }/*# sourceMappingURL=style.css.map */
