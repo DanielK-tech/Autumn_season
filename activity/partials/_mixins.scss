@@ -29,11 +29,10 @@
     justify-content: center; 
     position: fixed;  
     background: $NavigationBackgroud;
-    width: $widthOneHundert; 
+    width: $widthOneHundert;  
+    height: $remSize;
     color: $colorWhite;  
-    z-index: $zIndex; 
-    
-    
+    z-index: $zIndex;        
 } 
 
 //ul a li v nav 
@@ -63,7 +62,7 @@
             position: relative;
             text-decoration: none;
             color: $colorWhite;
-            z-index: 9999;
+            z-index: 999;
 
             &::before {
                 content: "";
