@@ -1,19 +1,23 @@
 @charset "UTF-8";
 /** velikosti **/
 /** barvičky **/
+/** obrázky **/
 /** fce pro paragrafy **/
 /*** fce na přepočet velikosti od body **/
 /** velikosti **/
 /** barvičky **/
+/** obrázky **/
 /** fce pro paragrafy **/
 /*** fce na přepočet velikosti od body **/
 /** velikosti **/
 /** barvičky **/
+/** obrázky **/
 /*** Multifunkční mixiny ***/
 /********************************************************/
 /********************************************************/
 /** velikosti **/
 /** barvičky **/
+/** obrázky **/
 * {
   padding: 0;
   margin: 0;
@@ -25,6 +29,27 @@ body {
   flex-direction: column;
   font-family: Raleway, sans-serif;
   font-size: 20px;
+}
+
+header {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-image: url(/img/podzimni_krajina.jpg);
+  background-size: cover;
+  background-position: 50% 55%;
+  min-height: 100vh;
+}
+
+h1 {
+  display: flex;
+  align-items: flex-end;
+  text-align: end;
+  position: absolute;
+  font-size: 4.5rem;
+  right: 35px;
+  bottom: 10px;
+  color: #fff;
 }
 
 p {
