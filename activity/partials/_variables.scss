@@ -19,6 +19,11 @@ $BackgroudReverse: radial-gradient(
     circle farthest-corner at 10% 20%,
     rgba(21, 133, 18, 0.5) 20%,
     rgba(148, 30, 9, 0.5) 110%
+); 
+$footerBackground: radial-gradient(
+    circle farthest-corner at 10% 20%,
+    #cccc17 150%,
+    #792c2c 50%
 );
 /** obrázky **/
 $backgroudHeader: url(/img/podzimni_krajina.jpg);

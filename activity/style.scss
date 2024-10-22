@@ -54,7 +54,23 @@ section {
     }
 }
 
-footer {
+footer { 
+    background: $NavigationBackgroud; 
+    p {
+        position: relative;
+        color: $colorWhite;
+        &::before {
+            content: "";
+            width: 100%; 
+            height: 100%;
+            background-image: $footerBackground;
+            filter: blur(10px);
+            position: absolute;
+            left: 0;
+            top: 0;
+            z-index: -1;
+        }
+    } 
     @include flexStandart;
     @include paddingSize();
 }
@@ -137,6 +153,78 @@ footer {
 
         .img3 {
             grid-area: footer;
+        }
+    }
+}
+/*** 3 sekce ***/ 
+.foceni { 
+    padding-bottom: 50px;
+}
+.foceni-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;   
+    height: 100%;   
+    .foceni-text {
+        text-align: center;
+        padding: 10px;
+    }
+    .foceni-photo { 
+       width: 60%;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(3, 250px);
+        grid-template-areas:
+            "a b c"
+            "d e f"
+            "g h ch";
+        gap: 10px; 
+        img {  
+                transition: 0.5s;
+                &:hover { 
+                    transform: scale(1.3);
+                }
+            }
+        .foceni-img {
+            width: 100%;
+            height: 100%; 
+            object-fit: cover;
+            @include borderRadius(); 
+            
+        }
+        .img1 {
+            grid-area: a;
+        }
+        .img2 {
+            grid-area: b;
+        }
+        .img3 {
+            grid-area: c;
+        }
+        .img4 {
+            grid-area: d;
+        }
+        .img5 {
+            grid-area: f;
+        }
+        .img6 {
+            grid-area: g;
+        }
+        .img7 {
+            grid-area: h;
+        }
+        .img8 {
+            grid-area: ch;
+        } 
+        .foceni-description {  
+            height: 100%; 
+            background-color: $colorWhite;  
+            display: flex;  
+            justify-content: center; 
+            align-items: center; 
+            flex-wrap: wrap;            
+            @include borderRadius();
+            grid-area: e;
         }
     }
 }

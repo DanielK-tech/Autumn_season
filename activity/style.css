@@ -70,11 +70,27 @@ section h2 {
 }
 
 footer {
+  background: radial-gradient(circle farthest-corner at 10% 20%, rgba(148, 30, 9, 0.5) 20%, rgba(21, 133, 18, 0.5) 110%);
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
   padding: 10px;
+}
+footer p {
+  position: relative;
+  color: #fff;
+}
+footer p::before {
+  content: "";
+  width: 100%;
+  height: 100%;
+  background-image: radial-gradient(circle farthest-corner at 10% 20%, #cccc17 150%, #792c2c 50%);
+  filter: blur(10px);
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: -1;
 }
 
 /********************************************************/
@@ -182,4 +198,75 @@ footer {
 }
 .houbreni-wrapper .houbareni-photo .img3 {
   grid-area: footer;
+}
+
+/*** 3 sekce ***/
+.foceni {
+  padding-bottom: 50px;
+}
+
+.foceni-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100%;
+}
+.foceni-wrapper .foceni-text {
+  text-align: center;
+  padding: 10px;
+}
+.foceni-wrapper .foceni-photo {
+  width: 60%;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 250px);
+  grid-template-areas: "a b c" "d e f" "g h ch";
+  gap: 10px;
+}
+.foceni-wrapper .foceni-photo img {
+  transition: 0.5s;
+}
+.foceni-wrapper .foceni-photo img:hover {
+  transform: scale(1.3);
+}
+.foceni-wrapper .foceni-photo .foceni-img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 5px;
+}
+.foceni-wrapper .foceni-photo .img1 {
+  grid-area: a;
+}
+.foceni-wrapper .foceni-photo .img2 {
+  grid-area: b;
+}
+.foceni-wrapper .foceni-photo .img3 {
+  grid-area: c;
+}
+.foceni-wrapper .foceni-photo .img4 {
+  grid-area: d;
+}
+.foceni-wrapper .foceni-photo .img5 {
+  grid-area: f;
+}
+.foceni-wrapper .foceni-photo .img6 {
+  grid-area: g;
+}
+.foceni-wrapper .foceni-photo .img7 {
+  grid-area: h;
+}
+.foceni-wrapper .foceni-photo .img8 {
+  grid-area: ch;
+}
+.foceni-wrapper .foceni-photo .foceni-description {
+  height: 100%;
+  background-color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  border-radius: 5px;
+  grid-area: e;
 }/*# sourceMappingURL=style.css.map */
