@@ -80,3 +80,40 @@
         }
     }
 }
+/*******************************************/
+@mixin tabletResponzivity {
+    @media only screen and (max-width: 953px) {
+        .activity-nav li {
+            display: none;
+        }
+        .foceni-wrapper {
+            .foceni-photo {
+                width: 80%;
+                grid-template-rows: repeat(3, 1fr);
+            }
+        }
+    }
+
+    @media only screen and (max-width: 820px) {
+        .drakiada-wrapper {
+            flex-direction: column;
+        }
+    } 
+
+    @media only screen and (max-width: 600px) { 
+        .foceni-wrapper {
+            .foceni-photo { 
+                display: flex; 
+                flex-direction: column;
+                width: 95%;                
+            } 
+            img { 
+                flex: 1 ; 
+                height: 100%;
+            } 
+             .foceni-img { 
+                flex: 1;
+             }
+        }
+    }
+}

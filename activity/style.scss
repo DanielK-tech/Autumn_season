@@ -125,30 +125,18 @@ footer {
 }
 
 /*** Druhá sekce ***/
-.houbreni-wrapper {
-    display: flex;
-    justify-content: space-between;
-    padding: 20px;
+.houbreni-wrapper {   
+    @extend .drakiada-wrapper;
 
-    .houbareni-text {
-        flex: 1;
-        padding: 10px;
-        text-align: center;
+    .houbareni-text { 
+        @extend .drakiada-text;        
     }
 
-    .houbareni-photo {
-        display: grid;
-        gap: 10px;
-        flex: 1;
-        grid-template: repeat(2, 1fr) / repeat(2, 1fr);
-        grid-template-areas:
-            "one two"
-            "footer footer";
+    .houbareni-photo { 
+        @extend .drakiada-photo;      
 
-        .houbareni-img {
-            @include borderRadius();
-            width: 100%;
-            height: 100%;
+        .houbareni-img { 
+            @extend .drakiada-img;            
         }
 
         .img3 {
@@ -227,4 +215,6 @@ footer {
             grid-area: e;
         }
     }
-}
+} 
+/**********************************/ 
+@include tabletResponzivity;
