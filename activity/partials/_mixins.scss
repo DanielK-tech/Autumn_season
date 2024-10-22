@@ -1,42 +1,46 @@
-@import './functions'; 
-@import './variables'; 
+@import './functions';
+@import './variables';
 
-/*** Multifunkční mixiny ***/ 
+/*** Multifunkční mixiny ***/
 
-@mixin flexStandart { 
-    display: flex; 
-    justify-content: center; 
-    align-items: center; 
+@mixin flexStandart {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     flex-direction: column;
-}  
+}
 
-@mixin WidthHeight ($width: 100%, $height: 100%){ 
-    width: $width; 
+@mixin WidthHeight ($width: 100%, $height: 100%) {
+    width: $width;
     height: $height;
 }
 
-@mixin paddingSize ($pixels: 10px) { 
+@mixin paddingSize ($pixels: 10px) {
     padding: $pixels;
-} 
+}
+
+@mixin borderRadius ($pixels: 5px) {
+    border-radius: $pixels;
+}
 
 
-/********************************************************/ 
+/********************************************************/
 /********************************************************/
 
 //navigace
-@mixin navFlex ($widthOneHundert: 100%, $zIndex: 9999) { 
-    display: flex; 
-    justify-content: center; 
-    position: fixed;  
+@mixin navFlex ($widthOneHundert: 100%, $zIndex: 9999) {
+    display: flex;
+    justify-content: center;
+    position: fixed;
     background: $NavigationBackgroud;
-    width: $widthOneHundert;  
+    width: $widthOneHundert;
     height: $remSize;
-    color: $colorWhite;  
-    z-index: $zIndex;        
-} 
+    color: $colorWhite;
+    z-index: $zIndex;
+}
 
 //ul a li v nav 
-@mixin navRest { 
+@mixin navRest {
     ul {
         display: flex;
         position: fixed;

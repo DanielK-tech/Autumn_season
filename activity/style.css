@@ -60,6 +60,15 @@ p {
   font-size: 18px;
 }
 
+section {
+  background-image: radial-gradient(circle farthest-corner at 10% 20%, rgba(21, 133, 18, 0.5) 20%, rgba(148, 30, 9, 0.5) 110%);
+}
+section h2 {
+  text-align: center;
+  padding-top: 10px;
+  font-size: 3rem;
+}
+
 footer {
   display: flex;
   justify-content: center;
@@ -121,10 +130,6 @@ footer {
 }
 
 /****** první sekce ****/
-.drakiada h2 {
-  text-align: center;
-}
-
 /** wrapper **/
 .drakiada-wrapper {
   display: flex;
@@ -138,11 +143,13 @@ footer {
 }
 .drakiada-wrapper .drakiada-photo {
   display: grid;
+  gap: 10px;
   flex: 1;
   grid-template: repeat(2, 1fr)/repeat(2, 1fr);
   grid-template-areas: "one two" "footer footer";
 }
 .drakiada-wrapper .drakiada-photo .drakiada-img {
+  border-radius: 5px;
   width: 100%;
   height: 100%;
 }
