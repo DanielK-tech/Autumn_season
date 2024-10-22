@@ -1,8 +1,6 @@
-@import './partials/variables';
-@import './partials/mixins';
-@import './partials/functions';
-
-
+@import "./partials/variables";
+@import "./partials/mixins";
+@import "./partials/functions";
 
 * {
     padding: 0;
@@ -59,7 +57,7 @@ h3 {
     font-size: $remSize;
     right: 35px;
     bottom: $tenPXSpace;
-    color: $colorWhite;    
+    color: $colorWhite;
 
     span {
         background: $NavigationBackgroud;
@@ -88,30 +86,30 @@ h3 {
     }
 
     @include SecondSection;
-} 
+}
 /***************************************************************/
-/***************************************************************/ 
+/***************************************************************/
 
-footer { 
-    display: flex; 
-    justify-content: center; 
-    align-items: center; 
-     
-    background: $NavigationBackgroud; 
-    padding: $tenPXSpace; 
-    font-size: $fontSize; 
-    p { 
+footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background: $NavigationBackgroud;
+    padding: $tenPXSpace;
+    font-size: $fontSize;
+    p {
         position: relative;
         color: $colorWhite;
-        &::before { 
+        &::before {
             content: "";
-                    @include WidthHeight();
-                    background-image: $footerBackground;
-                    filter: blur(10px);
-                    position: absolute;
-                    left: 0;
-                    top: 0;
-                    z-index: -1;
+            @include WidthHeight();
+            background-image: $footerBackground;
+            filter: blur(10px);
+            position: absolute;
+            left: 0;
+            top: 0;
+            z-index: -1;
         }
     }
 }

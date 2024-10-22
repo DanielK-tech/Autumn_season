@@ -1,5 +1,5 @@
-@import './functions';
-@import './variables';
+@import "./functions";
+@import "./variables";
 
 /*** Multifunkční mixiny ***/
 
@@ -10,25 +10,24 @@
     flex-direction: column;
 }
 
-@mixin WidthHeight ($width: 100%, $height: 100%) {
+@mixin WidthHeight($width: 100%, $height: 100%) {
     width: $width;
     height: $height;
 }
 
-@mixin paddingSize ($pixels: 10px) {
+@mixin paddingSize($pixels: 10px) {
     padding: $pixels;
 }
 
-@mixin borderRadius ($pixels: 5px) {
+@mixin borderRadius($pixels: 5px) {
     border-radius: $pixels;
 }
-
 
 /********************************************************/
 /********************************************************/
 
 //navigace
-@mixin navFlex ($widthOneHundert: 100%, $zIndex: 9999) {
+@mixin navFlex($widthOneHundert: 100%, $zIndex: 9999) {
     display: flex;
     justify-content: center;
     position: fixed;
@@ -39,7 +38,7 @@
     z-index: $zIndex;
 }
 
-//ul a li v nav 
+//ul a li v nav
 @mixin navRest {
     ul {
         display: flex;

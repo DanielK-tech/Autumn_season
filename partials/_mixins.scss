@@ -1,22 +1,23 @@
-@import './variables'; 
-@import './functions';
+@import "./variables";
+@import "./functions";
 
 /*** Multifinkční mixiny *****/
-@mixin BorderRadius ($radius: 5px) { //<= default, lze předělat v ()
+@mixin BorderRadius($radius: 5px) {
+    //<= default, lze předělat v ()
     border-radius: $radius;
 }
 
-@mixin WidthHeight ($width: 100%, $height: 100%) {
+@mixin WidthHeight($width: 100%, $height: 100%) {
     width: $width;
     height: $height;
-} 
+}
 
-@mixin hr ($width: 80%, $border: 2px solid black) { 
-    width: $width; 
+@mixin hr($width: 80%, $border: 2px solid black) {
+    width: $width;
     border: $border;
 }
-/********************************************************************/ 
-/********************************************************************/ 
+/********************************************************************/
+/********************************************************************/
 
 /** Ul v hlavní Navigaci **/
 @mixin mainUl {
@@ -60,8 +61,8 @@
         }
     }
 }
-/******************************************************************/ 
-/******************************************************************/ 
+/******************************************************************/
+/******************************************************************/
 
 /****** První sekce ******/
 @mixin firstSection {
@@ -74,12 +75,11 @@
     .first-text {
         align-items: center;
         justify-content: space-around;
-        
-         
-        .first-text-container{ 
-            display: flex; 
-            flex-direction: column; 
-            align-items: center; 
+
+        .first-text-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
             gap: sumMinus($gapSize, 1px);
         }
         .first-p {
@@ -91,7 +91,6 @@
             width: 50%;
             padding-bottom: 10px;
         }
-
     }
 
     /** fotky **/
@@ -122,7 +121,7 @@
     }
 }
 /*************************************************************/
-/*************************************************************/ 
+/*************************************************************/
 
 /** Druhá sekce **/
 @mixin SecondSection {
@@ -152,10 +151,10 @@
                 display: flex;
                 justify-content: center;
                 line-height: 2.75;
-                letter-spacing: 1px;                                 
+                letter-spacing: 1px;
             }
 
-            p {                 
+            p {
                 line-height: 1.5;
                 letter-spacing: 1px;
             }
@@ -182,17 +181,13 @@
                 }
             }
         }
-    } 
-    .second-hr { 
-        @include hr(95%); 
+    }
+    .second-hr {
+        @include hr(95%);
         margin-bottom: $gapSize;
     }
-
-} 
-/******************************************************/ 
-
-
-
+}
+/******************************************************/
 
 /********** Responzivity *********/
 @mixin tabletResponzivity {
@@ -233,17 +228,16 @@
                 }
             }
         }
-    } 
-    footer p { 
+    }
+    footer p {
         font-size: 1.14rem;
     }
 }
-/******************************************************/ 
-/******************************************************/ 
+/******************************************************/
+/******************************************************/
 
 @mixin mobileResponzivity {
     @media (max-width: 600px) {
-
         .main-navigation ul {
             display: none;
         }
@@ -261,7 +255,7 @@
             margin: 0 auto;
 
             h3 {
-                font-size: 1.25rem; 
+                font-size: 1.25rem;
                 text-align: center;
             }
 
@@ -270,6 +264,5 @@
                 text-align: center;
             }
         }
-
     }
 }

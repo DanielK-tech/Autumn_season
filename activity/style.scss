@@ -1,6 +1,6 @@
-@import './partials/functions';
-@import './partials/mixins';
-@import './partials/variables';
+@import "./partials/functions";
+@import "./partials/mixins";
+@import "./partials/variables";
 
 * {
     padding: 0;
@@ -62,18 +62,16 @@ footer {
 /********************************************************/
 /********************************************************/
 
-//navigace 
+//navigace
 .activity-nav {
     font: {
         weight: bold;
         size: 1.5rem;
-
     }
 
     @include navFlex();
     @include navRest;
 }
-
 
 /****** první sekce ****/
 
@@ -108,7 +106,6 @@ footer {
             grid-area: footer;
         }
     }
-
 }
 
 /*** Druhá sekce ***/
@@ -142,6 +139,4 @@ footer {
             grid-area: footer;
         }
     }
-
-
 }
