@@ -1,8 +1,37 @@
 @import "./variables";
-@import "./functions"; 
+@import "./functions";
 
+/**** Multifunkční mixiny ***/
+@mixin olFormater {
+    ol { 
+        position: relative;
+        counter-reset: item;
+        list-style-type: none; 
+        
+    }
 
-
+    ol li {        
+        counter-increment: item;
+        margin-bottom: 10px;
+        &::before {
+            content: counter(item) ". ";
+            font-weight: bold;
+            margin-right: 5px;
+        }
+    }
+} 
+/***************************/ 
+@mixin gapSpace ($gap: 10px){ 
+    gap: $gap;
+} 
+/****************************/ 
+@mixin borderRadius ($borderRadius: 5px){ 
+    border-radius: $borderRadius;
+} 
+/******************/ 
+@mixin paddingSize($pixels: 10px) {
+    padding: $pixels;
+}
 
 //navigace
 @mixin navFlex($widthOneHundert: 100%, $zIndex: 9999) {
@@ -47,7 +76,7 @@
 
             &::before {
                 content: "";
-                width: 100%; 
+                width: 100%;
                 height: 100%;
                 background-image: $backLight;
                 filter: blur(10px);

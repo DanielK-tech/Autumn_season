@@ -3,6 +3,10 @@
 /** barvičky **/
 /** obrázky **/
 /*** fce na přepočet velikosti od body **/
+/**** Multifunkční mixiny ***/
+/***************************/
+/****************************/
+/******************/
 /*******************************************/
 /** velikosti **/
 /** barvičky **/
@@ -45,6 +49,47 @@ h1 {
 
 h2 {
   font-size: 2rem;
+}
+
+section {
+  background-image: radial-gradient(circle farthest-corner at 10% 20%, rgba(21, 133, 18, 0.5) 20%, rgba(148, 30, 9, 0.5) 110%);
+}
+
+article {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  position: relative;
+}
+
+/*****/
+footer {
+  display: flex;
+  justify-content: center;
+  background: radial-gradient(circle farthest-corner at 10% 20%, rgba(148, 30, 9, 0.5) 20%, rgba(21, 133, 18, 0.5) 110%);
+  padding: 10px;
+}
+footer p {
+  position: relative;
+  color: #fff;
+}
+footer p::before {
+  content: "";
+  width: 100%;
+  height: 100%;
+  background-image: radial-gradient(circle farthest-corner at 10% 20%, #cccc17 150%, #792c2c 50%);
+  filter: blur(10px);
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: -1;
+}
+
+/** Multitřída **/
+.height {
+  height: 100vh;
 }
 
 /********************************************************/
@@ -97,4 +142,66 @@ h2 {
   left: 0;
   top: 0;
   z-index: -1;
-}/*# sourceMappingURL=style.css.map */
+}
+
+/****** h1 ***/
+.recepty-h1 span {
+  display: block;
+  background: radial-gradient(circle farthest-corner at 10% 20%, rgba(148, 30, 9, 0.5) 20%, rgba(21, 133, 18, 0.5) 110%);
+}
+
+/********** první sekce ***********/
+.strudel-wrapper, .dynovka-wrapper, .smazenice-wrapper, .jablecny-wrapper {
+  display: flex;
+  justify-content: space-around;
+  gap: 20px;
+  padding: 20px;
+}
+.strudel-wrapper .strudel-text, .dynovka-wrapper .strudel-text, .dynovka-wrapper .dynovka-text, .smazenice-wrapper .strudel-text, .smazenice-wrapper .smazenice-text, .jablecny-wrapper .strudel-text, .jablecny-wrapper .jablecny-text {
+  flex: 1;
+  margin-left: 10px;
+  text-align: justify;
+}
+.strudel-wrapper .strudel-text h3, .dynovka-wrapper .strudel-text h3, .dynovka-wrapper .dynovka-text h3, .smazenice-wrapper .strudel-text h3, .smazenice-wrapper .smazenice-text h3, .jablecny-wrapper .strudel-text h3, .jablecny-wrapper .jablecny-text h3 {
+  text-align: center;
+}
+.strudel-wrapper .strudel-text ol, .dynovka-wrapper .strudel-text ol, .dynovka-wrapper .dynovka-text ol, .smazenice-wrapper .strudel-text ol, .smazenice-wrapper .smazenice-text ol, .jablecny-wrapper .strudel-text ol, .jablecny-wrapper .jablecny-text ol {
+  position: relative;
+  counter-reset: item;
+  list-style-type: none;
+}
+.strudel-wrapper .strudel-text ol li, .dynovka-wrapper .strudel-text ol li, .dynovka-wrapper .dynovka-text ol li, .smazenice-wrapper .strudel-text ol li, .smazenice-wrapper .smazenice-text ol li, .jablecny-wrapper .strudel-text ol li, .jablecny-wrapper .jablecny-text ol li {
+  counter-increment: item;
+  margin-bottom: 10px;
+}
+.strudel-wrapper .strudel-text ol li::before, .dynovka-wrapper .strudel-text ol li::before, .dynovka-wrapper .dynovka-text ol li::before, .smazenice-wrapper .strudel-text ol li::before, .smazenice-wrapper .smazenice-text ol li::before, .jablecny-wrapper .strudel-text ol li::before, .jablecny-wrapper .jablecny-text ol li::before {
+  content: counter(item) ". ";
+  font-weight: bold;
+  margin-right: 5px;
+}
+.strudel-wrapper .strudel-img, .dynovka-wrapper .strudel-img, .dynovka-wrapper .dynovka-img, .smazenice-wrapper .strudel-img, .smazenice-wrapper .smazenice-img, .jablecny-wrapper .strudel-img, .jablecny-wrapper .jablecny-img {
+  flex: 1;
+  background-image: url(/img/strudel.jpg);
+  border-radius: 5px;
+}
+
+/*** Další sekce Koláček **/
+.jablecny-wrapper .jablecny-img {
+  background-image: url(/img/kolacek.jpeg);
+}
+
+/*** Další sekce smazenice **/
+.smazenice-wrapper .smazenice-img {
+  background-image: url(/img/smazenice.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+/*** Další sekce dynovka **/
+.dynovka-wrapper .dynovka-img {
+  background-image: url(/img/dynovka1.jpeg);
+  background-size: cover;
+  background-position: 50% 75%;
+}
+
+/***************************************//*# sourceMappingURL=style.css.map */

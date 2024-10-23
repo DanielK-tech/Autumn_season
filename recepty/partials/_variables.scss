@@ -2,7 +2,8 @@
 $basicValueP: 18px;
 $basicBodyFont: 20px;
 $remSize: 4.5rem;
-$fontH2Size: 2rem;
+$fontH2Size: 2rem; 
+$height: 100vh;
 /** barvičky **/
 $colorWhite: #fff;
 $NavigationBackgroud: radial-gradient(
@@ -26,4 +27,8 @@ $footerBackground: radial-gradient(
     #792c2c 50%
 ); 
 /** obrázky **/
-$backgroudHeader: url(/img/kolac.jpg);
+$backgroudHeader: url(/img/kolac.jpg); 
+$strudelPicture: url(/img/strudel.jpg); 
+$kolacekPicture: url(/img/kolacek.jpeg); 
+$smazenicePicture: url(/img/smazenice.jpg);
+$dynovkaPicture: url(/img/dynovka1.jpeg);

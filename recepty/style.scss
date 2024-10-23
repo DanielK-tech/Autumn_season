@@ -29,7 +29,7 @@ header {
 }
 h1 {
     display: flex;
-    align-items: flex-end;
+    align-items: flex-end;    
     text-align: end;
     position: absolute;
     font-size: $remSize;
@@ -40,6 +40,46 @@ h1 {
 
 h2 {
     font-size: $fontH2Size;
+} 
+section {
+    background-image: $BackgroudReverse;  
+}  
+
+article {  
+    display: flex; 
+    flex-direction: column; 
+    justify-content: center; 
+    align-items: center; 
+    height: 100% ; 
+    //zde upravuji
+    position: relative;
+} 
+/*****/ 
+footer {   
+    display: flex; 
+    justify-content: center;       
+    background: $NavigationBackgroud;
+    p { 
+        
+        position: relative;
+        color: $colorWhite;
+        &::before {
+            content: "";
+            width: 100%;
+            height: 100%;
+             background-image: $footerBackground;
+            filter: blur(10px);
+            position: absolute;
+            left: 0;
+            top: 0;
+            z-index: -1;
+        }
+    }    
+    @include paddingSize();
+}
+/** Multitřída **/ 
+.height { 
+    height: $height;
 }
 /********************************************************/
 /********************************************************/
@@ -54,4 +94,74 @@ h2 {
     @include navRest;
 } 
 
+/****** h1 ***/ 
+.recepty-h1 {  
+    
+    span {  
+        display: block;
+        background: $NavigationBackgroud;
+    }
+} 
 
+/********** první sekce ***********/ 
+.strudel-wrapper { 
+    display: flex; 
+    justify-content: space-around;  
+    @include gapSpace(20px);
+    padding: 20px;
+    .strudel-text { 
+        flex: 1;  
+        margin-left: 10px; 
+        text-align: justify;  
+       
+        h3 { 
+
+            text-align: center;
+        } 
+        @include olFormater;
+    } 
+    .strudel-img { 
+        flex: 1; 
+        background-image: $strudelPicture;         
+        @include borderRadius();
+    }
+} 
+/*** Další sekce Koláček **/ 
+.jablecny-wrapper { 
+    @extend .strudel-wrapper; 
+    .jablecny-text { 
+        @extend .strudel-text;
+    } 
+
+    .jablecny-img { 
+        @extend .strudel-img; 
+        background-image: $kolacekPicture;
+    }
+} 
+/*** Další sekce smazenice **/  
+.smazenice-wrapper { 
+    @extend .strudel-wrapper; 
+    .smazenice-text { 
+        @extend .strudel-text;
+    } 
+    .smazenice-img { 
+        @extend .strudel-img; 
+        background-image: $smazenicePicture; 
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+} 
+/*** Další sekce dynovka **/  
+.dynovka-wrapper { 
+    @extend .strudel-wrapper; 
+    .dynovka-text { 
+        @extend .strudel-text;
+    } 
+    .dynovka-img { 
+        @extend .strudel-img; 
+        background-image: $dynovkaPicture; 
+        background-size: cover;
+        background-position: 50% 75%;
+    }
+}  
+/***************************************/
