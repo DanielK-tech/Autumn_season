@@ -16,17 +16,17 @@ body {
         size: $basicBodyFont;
     }
     min-height: 100vh;
-} 
+}
 
-header { 
+header {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     background-image: $backgroudHeader;
     background-size: cover;
-    background-position: 15%; 
-    min-height: 100vh;;
-} 
+    background-position: 15%;
+    min-height: 100vh;
+}
 h1 {
     display: flex;
     align-items: flex-end;
@@ -41,4 +41,17 @@ h1 {
 h2 {
     font-size: $fontH2Size;
 }
+/********************************************************/
+/********************************************************/
+
+//navigace
+.recepty-nav {
+    font: {
+        weight: bold;
+        size: 1.5rem;
+    }
+    @include navFlex();
+    @include navRest;
+} 
+
 

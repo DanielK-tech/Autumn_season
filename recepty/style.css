@@ -3,6 +3,7 @@
 /** barvičky **/
 /** obrázky **/
 /*** fce na přepočet velikosti od body **/
+/*******************************************/
 /** velikosti **/
 /** barvičky **/
 /** obrázky **/
@@ -44,4 +45,56 @@ h1 {
 
 h2 {
   font-size: 2rem;
+}
+
+/********************************************************/
+/********************************************************/
+.recepty-nav {
+  font-weight: bold;
+  font-size: 1.5rem;
+  display: flex;
+  justify-content: center;
+  position: fixed;
+  background: radial-gradient(circle farthest-corner at 10% 20%, rgba(148, 30, 9, 0.5) 20%, rgba(21, 133, 18, 0.5) 110%);
+  width: 100%;
+  height: 4.5rem;
+  color: #fff;
+  z-index: 9999;
+}
+.recepty-nav ul {
+  display: flex;
+  position: fixed;
+  gap: 20px;
+  width: 100%;
+  justify-content: center;
+  z-index: 10041121;
+}
+.recepty-nav ul li {
+  list-style: none;
+  width: -moz-fit-content;
+  width: fit-content;
+  font-size: 1.7em;
+  padding-top: 10px;
+  padding-right: 20px;
+  transition: 0.5s;
+}
+.recepty-nav ul li:hover {
+  transform: scale(1.3) rotate(15deg);
+}
+.recepty-nav ul a {
+  position: relative;
+  text-decoration: none;
+  color: #fff;
+  z-index: 999;
+}
+.recepty-nav ul a::before {
+  content: "";
+  width: 100%;
+  height: 100%;
+  background-image: radial-gradient(circle farthest-corner at 10% 20%, #cccc17 25%, #792c2c 100%);
+  filter: blur(10px);
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: -1;
 }/*# sourceMappingURL=style.css.map */
