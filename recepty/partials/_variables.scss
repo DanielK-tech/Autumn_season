@@ -1,0 +1,29 @@
+/** velikosti **/
+$basicValueP: 18px;
+$basicBodyFont: 20px;
+$remSize: 4.5rem;
+$fontH2Size: 2rem;
+/** barvičky **/
+$colorWhite: #fff;
+$NavigationBackgroud: radial-gradient(
+    circle farthest-corner at 10% 20%,
+    rgba(148, 30, 9, 0.5) 20%,
+    rgba(21, 133, 18, 0.5) 110%
+);
+$backLight: radial-gradient(
+    circle farthest-corner at 10% 20%,
+    #cccc17 25%,
+    #792c2c 100%
+);
+$BackgroudReverse: radial-gradient(
+    circle farthest-corner at 10% 20%,
+    rgba(21, 133, 18, 0.5) 20%,
+    rgba(148, 30, 9, 0.5) 110%
+); 
+$footerBackground: radial-gradient(
+    circle farthest-corner at 10% 20%,
+    #cccc17 150%,
+    #792c2c 50%
+); 
+/** obrázky **/
+$backgroudHeader: url(/img/kolac.jpg);

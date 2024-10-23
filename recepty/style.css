@@ -1,0 +1,47 @@
+@charset "UTF-8";
+/** velikosti **/
+/** barvičky **/
+/** obrázky **/
+/*** fce na přepočet velikosti od body **/
+/** velikosti **/
+/** barvičky **/
+/** obrázky **/
+/*** fce na přepočet velikosti od body **/
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  font-family: Raleway, sans-serif;
+  font-size: 20px;
+  min-height: 100vh;
+}
+
+header {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-image: url(/img/kolac.jpg);
+  background-size: cover;
+  background-position: 15%;
+  min-height: 100vh;
+}
+
+h1 {
+  display: flex;
+  align-items: flex-end;
+  text-align: end;
+  position: absolute;
+  font-size: 4.5rem;
+  right: 35px;
+  bottom: 10px;
+  color: #fff;
+}
+
+h2 {
+  font-size: 2rem;
+}/*# sourceMappingURL=style.css.map */
