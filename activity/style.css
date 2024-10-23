@@ -158,6 +158,12 @@ footer p::before {
   padding: 10px;
   text-align: center;
 }
+.drakiada-wrapper img, .houbreni-wrapper img {
+  transition: 0.5s;
+}
+.drakiada-wrapper img:hover, .houbreni-wrapper img:hover {
+  transform: scale(1.1);
+}
 .drakiada-wrapper .drakiada-photo, .houbreni-wrapper .drakiada-photo, .houbreni-wrapper .houbareni-photo {
   display: grid;
   gap: 10px;
